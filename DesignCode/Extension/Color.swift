@@ -13,6 +13,7 @@ extension Color {
     static let background1 = Color("background1")
     static let background2 = Color("background2")
     static let background3 = Color("background3")
+    static let background4 = Color("background4")
     
     static let card1 = Color("card1")
     static let card2 = Color("card2")
