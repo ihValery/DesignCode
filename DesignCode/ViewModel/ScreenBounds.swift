@@ -27,6 +27,6 @@ class ScreenBounds {
     }
     
     var offset: CGFloat {
-        screen < 750 ? screen * 2 / 3 : 500
+        screen < 750 ? screen / 2 : 360
     }
 }
