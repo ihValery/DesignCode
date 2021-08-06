@@ -8,32 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var show = false
+    
     var body: some View {
         ZStack {
             TitleView()
-                .blur(radius: 20)
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
             
-            BackCardView(color: "card4")
-                .offset(y: -40)
-                .scaleEffect(0.9)
-                .rotationEffect(.degrees(10))
-                .rotation3DEffect(.degrees(10),
-                    axis: (x: 10, y: 0, z: 0))
-                .blendMode(.hardLight)
-            
-            BackCardView(color: "card3")
-                .offset(y: -20)
-                .scaleEffect(0.95)
-                .rotationEffect(.degrees(5))
-                .rotation3DEffect(.degrees(5),
-                    axis: (x: 10, y: 0, z: 0))
-                .blendMode(.hardLight)
-            
+            BackCardView(color: .card4)
+                .scaleEffect(0.8, anchor: .topTrailing)
+                .rotationEffect(.degrees(show ? 60 : 10), anchor: .topTrailing)
+                .animation(.spring(dampingFraction: 0.7))
+
+            BackCardView(color: .card3)
+                .scaleEffect(0.9, anchor: .topTrailing)
+                .rotationEffect(.degrees(show ? 30 : 5), anchor: .topTrailing)
+                .animation(.spring(dampingFraction: 0.6, blendDuration: 0.3))
+
             CardView()
-                .blendMode(.hardLight)
+                .onTapGesture {
+                    show.toggle()
+                }
             
             BottomCardView()
-                .blur(radius: 20)
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
         }
     }
 }
