@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var screen = ScreenBounds()
+    @Binding var showCard: Bool
     
     var body: some View {
         VStack {
@@ -34,16 +35,17 @@ struct CardView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: screen.width250, height: screen.height250, alignment: .top)
         }
+        .frame(width: screen.width, height: screen.height)
         .background(Color.black)
-        .cornerRadius(20)
+        .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
+        .offset(y: showCard ? -100 : 0)
         .shadow(radius: 20)
         .blendMode(.hardLight)
-        .frame(width: screen.width, height: screen.height)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(showCard: .constant(true))
     }
 }
