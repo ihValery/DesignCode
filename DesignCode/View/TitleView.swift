@@ -11,9 +11,9 @@ struct TitleView: View {
     var body: some View {
         VStack {
             HStack {
-//                Text("Certificate")
-//                    .font(.largeTitle)
-//                    .fontWeight(.bold)
+                Text("Certificate")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 Spacer()
             }
             .padding()
