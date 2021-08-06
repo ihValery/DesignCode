@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var screen = ScreenBounds()
+    
     @State private var show = false
     @State private var viewState = CGSize.zero
     @State private var showCard = false
+    @State private var bottomState = CGSize.zero
+    @State private var bottomStateFull = false
     
     var body: some View {
         ZStack {
@@ -20,11 +24,12 @@ struct ContentView: View {
                 .scaleEffect(showCard ? 1.5 : 1)
                 .animation(.default
                             .delay(0.1)
-                            .speed(1))
+                            .speed(2))
             
             BackCardView(color: .card4)
                 .offset(x: viewState.width, y: viewState.height)
-                .offset(y: showCard ? -215 : 0)
+                .offset(y: showCard ? -210 : 0)
+                .opacity(bottomState.height < -250 ? 0 : 1)
                 .scaleEffect(0.8, anchor: showCard ? .top : .topTrailing)
                 .rotationEffect(.degrees(show ? 60 : 10), anchor: .topTrailing)
                 .rotationEffect(.degrees(showCard ? -10 : 0), anchor: .topTrailing)
@@ -56,10 +61,39 @@ struct ContentView: View {
                             }
                 )
             
+            Text("\(bottomState.height)").offset(y: screen.bottomFullOffset)
+            
             BottomCardView()
                 .offset(y: showCard ? getRect().height / 2 : 1000)
+                .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                .gesture(DragGesture()
+                            .onChanged { value in
+                                bottomState = value.translation
+                                if bottomStateFull {
+                                    bottomState.height += screen.bottomFullOffset
+                                }
+                                
+                                if bottomState.height < screen.bottomFullOffset {
+                                    bottomState.height = screen.bottomFullOffset
+                                }
+                            }
+                            .onEnded { value in
+                                if bottomState.height > 70 {
+                                    showCard = false
+                                }
+                                
+                                if (bottomState.height < -110 && !bottomStateFull) ||
+                                    (bottomState.height < -200 && bottomStateFull) {
+                                    bottomState.height = screen.bottomFullOffset
+                                    bottomStateFull = true
+                                } else {
+                                    bottomState = .zero
+                                    bottomStateFull = false
+                                }
+                            }
+                )
         }
     }
 }
