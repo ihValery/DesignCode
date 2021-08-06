@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ScreenBounds: ObservableObject {
+class ScreenBounds {
     private var screen = UIScreen.main.bounds.height
     
     var width: CGFloat {
