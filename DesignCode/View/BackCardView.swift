@@ -8,22 +8,21 @@
 import SwiftUI
 
 struct BackCardView: View {
-    let color: String
+    let color: Color
+    var screen = ScreenBounds()
     
     var body: some View {
-        VStack {
-            Spacer()
-        }
-        .frame(width: 340, height: 220)
-        .background(Color(color))
-        .cornerRadius(20)
-        .shadow(radius: 20)
+        color
+            .cornerRadius(20)
+            .shadow(radius: 20)
+            .blendMode(.hardLight)
+            .frame(width: screen.width, height: screen.height)
     }
 }
 
 
 struct BackCardView_Previews: PreviewProvider {
     static var previews: some View {
-        BackCardView(color: "card3")
+        BackCardView(color: .card4)
     }
 }

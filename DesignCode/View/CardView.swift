@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CardView: View {
+    var screen = ScreenBounds()
+    
     var body: some View {
         VStack {
             HStack {
@@ -17,7 +19,7 @@ struct CardView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                     Text("Certificate")
-                        .foregroundColor(Color("accent"))
+                        .foregroundColor(.accent)
                 }
                 
                 Spacer()
@@ -30,12 +32,13 @@ struct CardView: View {
             Image("Card1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 300, height: 110, alignment: .top)
+                .frame(width: screen.width250, height: screen.height250, alignment: .top)
         }
-        .frame(width: 340, height: 220)
         .background(Color.black)
         .cornerRadius(20)
         .shadow(radius: 20)
+        .blendMode(.hardLight)
+        .frame(width: screen.width, height: screen.height)
     }
 }
 

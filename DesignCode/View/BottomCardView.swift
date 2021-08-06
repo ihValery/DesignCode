@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BottomCardView: View {
+    var screen = ScreenBounds()
+    
     var body: some View {
         VStack(spacing: 20) {
             Rectangle()
@@ -27,7 +29,7 @@ struct BottomCardView: View {
         .background(Color.white)
         .cornerRadius(20)
         .shadow(radius: 20)
-        .offset(y: 500)
+        .offset(y: screen.offset)
     }
 }
 

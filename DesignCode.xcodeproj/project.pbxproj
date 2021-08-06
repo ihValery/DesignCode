@@ -15,6 +15,9 @@
 		809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4626BC3AC600D78937 /* BackCardView.swift */; };
 		809B4E4926BC6C1E00D78937 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4826BC6C1E00D78937 /* TitleView.swift */; };
 		809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4A26BC70AC00D78937 /* BottomCardView.swift */; };
+		809B4E4E26BCF14A00D78937 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4D26BCF14A00D78937 /* Color.swift */; };
+		809B4E5026BCFBC200D78937 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4F26BCFBC200D78937 /* View.swift */; };
+		809B4E5326BD171E00D78937 /* ScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E5226BD171E00D78937 /* ScreenBounds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		809B4E4626BC3AC600D78937 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		809B4E4826BC6C1E00D78937 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		809B4E4A26BC70AC00D78937 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
+		809B4E4D26BCF14A00D78937 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		809B4E4F26BCFBC200D78937 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		809B4E5226BD171E00D78937 /* ScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBounds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +68,9 @@
 			children = (
 				809B4E3326BC244300D78937 /* DesignCodeApp.swift */,
 				809B4E3526BC244300D78937 /* ContentView.swift */,
+				809B4E5126BD16B000D78937 /* ViewModel */,
 				809B4E4326BC2DBC00D78937 /* View */,
+				809B4E4C26BCECD500D78937 /* Extension */,
 				809B4E4226BC245E00D78937 /* System32 */,
 			);
 			path = DesignCode;
@@ -95,6 +103,23 @@
 				809B4E4A26BC70AC00D78937 /* BottomCardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		809B4E4C26BCECD500D78937 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				809B4E4D26BCF14A00D78937 /* Color.swift */,
+				809B4E4F26BCFBC200D78937 /* View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		809B4E5126BD16B000D78937 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				809B4E5226BD171E00D78937 /* ScreenBounds.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809B4E5026BCFBC200D78937 /* View.swift in Sources */,
+				809B4E5326BD171E00D78937 /* ScreenBounds.swift in Sources */,
 				809B4E3626BC244300D78937 /* ContentView.swift in Sources */,
 				809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */,
 				809B4E4526BC2DC700D78937 /* CardView.swift in Sources */,
+				809B4E4E26BCF14A00D78937 /* Color.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				809B4E4926BC6C1E00D78937 /* TitleView.swift in Sources */,
