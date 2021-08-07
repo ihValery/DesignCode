@@ -28,5 +28,6 @@ struct MenuRow: View {
 struct MenuRow_Previews: PreviewProvider {
     static var previews: some View {
         MenuRow(title: "Account", icon: "gear")
+            .previewDevice("iPhone 12 Pro")
     }
 }

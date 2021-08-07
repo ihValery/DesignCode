@@ -34,5 +34,6 @@ struct BottomCardView: View {
 struct BottomCardView_Previews: PreviewProvider {
     static var previews: some View {
         BottomCardView()
+            .previewDevice("iPhone 12 Pro")
     }
 }

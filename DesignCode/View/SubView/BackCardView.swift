@@ -16,7 +16,7 @@ struct BackCardView: View {
             .cornerRadius(20)
             .shadow(radius: 20)
             .blendMode(.hardLight)
-            .frame(width: screen.width, height: screen.height)
+            .frame(width: screen.widthCard, height: screen.heightCard)
     }
 }
 
@@ -24,5 +24,6 @@ struct BackCardView: View {
 struct BackCardView_Previews: PreviewProvider {
     static var previews: some View {
         BackCardView(color: .card4)
+            .previewDevice("iPhone 12 Pro")
     }
 }

@@ -33,9 +33,9 @@ struct CardView: View {
             Image("Card1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: screen.width250, height: screen.height250, alignment: .top)
+                .frame(width: screen.widthImageInCard, height: screen.heightImageInCard, alignment: .top)
         }
-        .frame(width: screen.width, height: screen.height)
+        .frame(width: screen.widthCard, height: screen.heightCard)
         .background(Color.black)
         .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
         .offset(y: showCard ? -100 : 0)
@@ -47,5 +47,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(showCard: .constant(true))
+            .previewDevice("iPhone 12 Pro")
     }
 }
