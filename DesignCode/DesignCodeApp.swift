@@ -11,8 +11,9 @@ import SwiftUI
 struct DesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
+            Home()
 //            MenuView()
-            ContentView()
+//            ContentView()
         }
     }
 }
