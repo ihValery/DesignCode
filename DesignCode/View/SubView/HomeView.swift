@@ -32,8 +32,8 @@ struct HomeView: View {
                         SectionView()
                     }
                 }
-                .padding(30)
-                .padding(.bottom, 30)
+                .padding(.horizontal, 30)
+                .padding(.bottom, 60)
             }
             
             Spacer()

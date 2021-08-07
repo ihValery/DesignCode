@@ -36,4 +36,8 @@ class ScreenBounds {
     var bottomFullOffset: CGFloat {
         screen.height < 750 ? -screen.height / 2 + 20 : -screen.height / 2 + 64
     }
+    
+    var widthSectionCard: CGFloat {
+        screen.height < 750 ? 200 : 275
+    }
 }
