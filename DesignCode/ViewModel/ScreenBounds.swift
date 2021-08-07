@@ -9,14 +9,9 @@ import SwiftUI
 
 class ScreenBounds {
     private var screen = UIScreen.main.bounds
-    
-    var height: CGFloat {
-        screen.height
-    }
-    
-    var width: CGFloat {
-        screen.width
-    }
+
+    var height = UIScreen.main.bounds.height
+    var width = UIScreen.main.bounds.width
     
     var widthCard: CGFloat {
         screen.height < 750 ? 290 : 340
@@ -39,6 +34,6 @@ class ScreenBounds {
 //    }
     
     var bottomFullOffset: CGFloat {
-        screen.height < 750 ? -260 : -340
+        screen.height < 750 ? -screen.height / 2 + 20 : -screen.height / 2 + 64
     }
 }
