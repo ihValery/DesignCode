@@ -61,8 +61,6 @@ struct ContentView: View {
                             }
                 )
             
-            Text("\(bottomState.height)").offset(y: screen.bottomFullOffset)
-            
             BottomCardView()
                 .offset(y: showCard ? getRect().height / 2 : 1000)
                 .offset(y: bottomState.height)
