@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct SectionView: View {
+    var screen = ScreenBounds()
+    
     var body: some View {
         VStack {
             HStack(alignment: .top) {
                 Text("Prototype design in SwiftUI")
-                    .font(.system(size: 28, weight: .bold))
-                    .frame(width: 160, alignment: .leading)
+                    .font(screen.height < 750 ? .title3 : .title)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.white)
                 
                 Spacer()
@@ -25,12 +28,12 @@ struct SectionView: View {
             Image("Card1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 210)
+                .frame(width: screen.widthSectionCard - 65)
         }
         .padding(.top)
         .padding(.horizontal)
         .background(Color.card1)
-        .frame(width: 275, height: 275)
+        .frame(width: screen.widthSectionCard, height: screen.widthSectionCard)
         .cornerRadius(30)
         .shadow(color: Color.card1.opacity(0.3), radius: 20, x: 0, y: 20)
     }
