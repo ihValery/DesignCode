@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @State private var showProfile = false
+    @State private var profileState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -42,7 +43,8 @@ struct Home: View {
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: showProfile ? 30 : 0, style: .continuous))
                 .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
-                .rotation3DEffect(.degrees(showProfile ? -10 : 0), axis: (x: 10, y: 0, z: 0))
+                .rotation3DEffect(.degrees(showProfile ? Double(profileState.height / 10) - 10 : 0),
+                                  axis: (x: 10, y: 0, z: 0))
                 .offset(y: showProfile ? -450 : 0)
                 .scaleEffect(showProfile ? 0.9 : 1)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
@@ -53,8 +55,20 @@ struct Home: View {
             }
             
             MenuView()
-                .offset(y: showProfile ? 0 : 600)
+                .offset(y: showProfile ? 0 : 1000)
+                .offset(x: profileState.width, y: profileState.height)
                 .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                .gesture(DragGesture()
+                            .onChanged { value in
+                                if profileState.height > 70 {
+                                    showProfile = false
+                                }
+                                profileState = value.translation
+                            }
+                            .onEnded { value in
+                                profileState = .zero
+                            }
+                )
         }
     }
 }
@@ -62,5 +76,6 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .previewDevice("iPhone 12 Pro")
     }
 }
