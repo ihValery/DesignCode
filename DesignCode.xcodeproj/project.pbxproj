@@ -25,6 +25,8 @@
 		80D6A5B526BF0D3200A2797D /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5B426BF0D3200A2797D /* AvatarButton.swift */; };
 		80D6A5B726BF11ED00A2797D /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5B626BF11ED00A2797D /* SectionView.swift */; };
 		80D6A5BA26BF185100A2797D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5B926BF185100A2797D /* Section.swift */; };
+		80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5BB26BF2A9100A2797D /* ButtonBell.swift */; };
+		80D6A5BE26BF2BEE00A2797D /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		80D6A5B426BF0D3200A2797D /* AvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 		80D6A5B626BF11ED00A2797D /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		80D6A5B926BF185100A2797D /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		80D6A5BB26BF2A9100A2797D /* ButtonBell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBell.swift; sourceTree = "<group>"; };
+		80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				809B4E3526BC244300D78937 /* ContentView.swift */,
 				80D6A5B026BE02A200A2797D /* Home.swift */,
 				80D6A5AB26BDC51A00A2797D /* ProfileMenuView.swift */,
+				80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */,
 				80D6A5AF26BE020A00A2797D /* SubView */,
 			);
 			path = View;
@@ -145,6 +150,7 @@
 				809B4E4A26BC70AC00D78937 /* BottomCardView.swift */,
 				80D6A5AD26BDC8AB00A2797D /* MenuRow.swift */,
 				80D6A5B226BF0C3800A2797D /* HomeView.swift */,
+				80D6A5BB26BF2A9100A2797D /* ButtonBell.swift */,
 				80D6A5B426BF0D3200A2797D /* AvatarButton.swift */,
 				80D6A5B626BF11ED00A2797D /* SectionView.swift */,
 			);
@@ -236,8 +242,10 @@
 				809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */,
 				809B4E4526BC2DC700D78937 /* CardView.swift in Sources */,
 				80D6A5AE26BDC8AB00A2797D /* MenuRow.swift in Sources */,
+				80D6A5BE26BF2BEE00A2797D /* UpdateList.swift in Sources */,
 				80D6A5AC26BDC51A00A2797D /* ProfileMenuView.swift in Sources */,
 				809B4E4E26BCF14A00D78937 /* Color.swift in Sources */,
+				80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,

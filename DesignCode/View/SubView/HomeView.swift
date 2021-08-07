@@ -12,6 +12,7 @@ struct HomeView: View {
     
     @Binding var showProfile: Bool
     @Binding var profileState: CGSize
+    @State private var showUpdate = false
     
     var body: some View {
         VStack {
@@ -21,6 +22,8 @@ struct HomeView: View {
                 Spacer()
                 
                 AvatarButton(showProfile: $showProfile)
+                
+                ButtonBell(showUpdate: $showUpdate)
             }
             .padding(.horizontal)
             .padding(.leading, 16)
@@ -56,6 +59,10 @@ struct HomeView: View {
         .scaleEffect(showProfile ? 0.9 : 1)
         .animation(.spring(response: 0.5, dampingFraction: 0.6))
         .edgesIgnoringSafeArea(.all)
+        
+        .sheet(isPresented: $showUpdate) {
+            ContentView()
+        }
     }
 }
 
