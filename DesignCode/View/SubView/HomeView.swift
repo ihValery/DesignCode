@@ -27,11 +27,19 @@ struct HomeView: View {
             .padding(.top, 30)
                 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 30) {
-                    ForEach(0 ..< 5) { item in
-                        SectionView()
+                HStack(spacing: 20) {
+                    ForEach(sectionData) { item in
+                        GeometryReader { gr in
+                            SectionView(section: item)
+                                //- 30 это начальное смещение .padding(.horizontal, 30)
+                                //а мы не хотим угол у первой карточки
+                                .rotation3DEffect(.degrees(Double(gr.frame(in: .global).minX - 30) / -20),
+                                    axis: (x: 0, y: 20, z: 0))
+                        }
+                        .frame(width: screen.widthSectionCard, height: screen.widthSectionCard)
                     }
                 }
+                .padding(.top)
                 .padding(.horizontal, 30)
                 .padding(.bottom, 60)
             }
