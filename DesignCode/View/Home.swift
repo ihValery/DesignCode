@@ -49,7 +49,7 @@ struct Home: View {
                                   axis: (x: 10, y: 0, z: profileState.width / 10))
                 .offset(y: showProfile ? profileState.height - 400 : 0)
                 .scaleEffect(showProfile ? 0.9 : 1)
-                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+                .animation(.spring(response: 0.5, dampingFraction: 0.65, blendDuration: 0))
                 .edgesIgnoringSafeArea(.all)
             }
             .onTapGesture {
