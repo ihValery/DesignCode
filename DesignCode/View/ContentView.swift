@@ -62,7 +62,7 @@ struct ContentView: View {
                 )
             
             BottomCardView()
-                .offset(y: showCard ? getRect().height / 2 : 1000)
+                .offset(y: showCard ? screen.height / 2 : 1000)
                 .offset(y: bottomState.height)
                 .blur(radius: show ? 20 : 0)
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
@@ -99,6 +99,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 12 Pro")
 //            .preferredColorScheme(.dark)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  MenuView.swift
+//  ProfileMenuView.swift
 //  DesignCode
 //
 //  Created by Валерий Игнатьев on 06.08.2021.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct MenuView: View {
+struct ProfileMenuView: View {
     var body: some View {
         VStack {
             Spacer()
     
-            VStack(spacing: 16) {
+            VStack(spacing: 5) {
                 Text("Meng - 28% complete")
                 
                 Color.white
@@ -26,9 +26,11 @@ struct MenuView: View {
                     .cornerRadius(12)
                     .padding()
                 
-                MenuRow(title: "Account", icon: "gear")
-                MenuRow(title: "Billing", icon: "creditcard")
-                MenuRow(title: "Sign out", icon: "person.crop.circle")
+                VStack(spacing: 16) {
+                    MenuRow(title: "Account", icon: "gear")
+                    MenuRow(title: "Billing", icon: "creditcard")
+                    MenuRow(title: "Sign out", icon: "person.crop.circle")
+                }
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
@@ -51,7 +53,7 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        ProfileMenuView()
             .previewDevice("iPhone 12 Pro")
     }
 }

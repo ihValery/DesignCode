@@ -8,29 +8,37 @@
 import SwiftUI
 
 class ScreenBounds {
-    private var screen = UIScreen.main.bounds.height
-    
-    var width: CGFloat {
-        screen < 750 ? 290 : 340
-    }
+    private var screen = UIScreen.main.bounds
     
     var height: CGFloat {
-        screen < 750 ? 181.25 : 212.5
+        screen.height
     }
     
-    var width250: CGFloat {
-        screen < 750 ? 250 : 300
+    var width: CGFloat {
+        screen.width
     }
     
-    var height250: CGFloat {
-        screen < 750 ? 78.125 : 93.75
+    var widthCard: CGFloat {
+        screen.height < 750 ? 290 : 340
     }
     
-    var offset: CGFloat {
-        screen < 750 ? screen / 2 : 360
+    var heightCard: CGFloat {
+        screen.height < 750 ? 181.25 : 212.5
     }
+    
+    var widthImageInCard: CGFloat {
+        screen.height < 750 ? 250 : 300
+    }
+    
+    var heightImageInCard: CGFloat {
+        screen.height < 750 ? 78.125 : 93.75
+    }
+    
+//    var offset: CGFloat {
+//        screen.height < 750 ? screen.height / 2 : 360
+//    }
     
     var bottomFullOffset: CGFloat {
-        screen < 750 ? -260 : -340
+        screen.height < 750 ? -260 : -340
     }
 }
