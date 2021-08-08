@@ -9,12 +9,20 @@ import SwiftUI
 
 struct UpdateList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(updateData) { item in
+                NavigationLink(destination: Text(item.text)) {
+                    UpdateRow(element: item)
+                }
+            }
+            .navigationBarTitle(Text("Updates"))
+        }
     }
 }
 
 struct UpdateList_Previews: PreviewProvider {
     static var previews: some View {
         UpdateList()
+            .previewDevice("iPhone 12 Pro")
     }
 }
