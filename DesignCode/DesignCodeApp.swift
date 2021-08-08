@@ -11,9 +11,7 @@ import SwiftUI
 struct DesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
-//            UpdateList()
-            Home()
-//            ContentView()
+            TabBar()
         }
     }
 }

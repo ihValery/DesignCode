@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Certificate.swift
 //  DesignCode
 //
 //  Created by Валерий Игнатьев on 05.08.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Certificate: View {
     private var screen = ScreenBounds()
     
     @State private var show = false
@@ -38,6 +38,7 @@ struct ContentView: View {
             BackCardView(color: .card3)
                 .offset(x: viewState.width, y: viewState.height)
                 .offset(y: showCard ? -160 : 0)
+                .opacity(bottomState.height < -250 ? 0 : 1)
                 .scaleEffect(0.9, anchor: showCard ? .top : .topTrailing)
                 .rotationEffect(.degrees(show ? 30 : 5), anchor: .topTrailing)
                 .rotationEffect(.degrees(showCard ? -5 : 0), anchor: .topTrailing)
@@ -98,7 +99,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Certificate()
             .previewDevice("iPhone 12 Pro")
 //            .preferredColorScheme(.dark)
     }
