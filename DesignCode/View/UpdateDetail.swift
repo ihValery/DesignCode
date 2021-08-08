@@ -21,9 +21,9 @@ struct UpdateDetail: View {
                 Text(element.text)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .navigationBarTitle(element.title)
+            .navigationTitle(element.title)
         }
-        .listStyle(PlainListStyle())
+//        .listStyle(PlainListStyle())
     }
 }
 

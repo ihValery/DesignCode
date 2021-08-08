@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct UpdateList: View {
+    @ObservedObject var store = UpdateStore()
+    
+    func add() {
+        store.updates.append(Update(image: "Card6", title: "New item", text: "This is a hardcoded item. For dynamism, it is tedious to create a separate view in which we will collect the data entered by the user.", date: "AUG 8"))
+    }
+    
     var body: some View {
         NavigationView {
-            List(updateData) { item in
-                NavigationLink(destination: UpdateDetail(element: item)) {
-                    UpdateRow(element: item)
+            List {
+                ForEach(store.updates) { item in
+                    NavigationLink(destination: UpdateDetail(element: item)) {
+                        UpdateRow(element: item)
+                    }
+                }
+                .onDelete { indexSet in
+                    store.updates.remove(at: indexSet.first!)
+                }
+                .onMove { indices, newOffset in
+                    store.updates.move(fromOffsets: indices, toOffset: newOffset)
                 }
             }
             .navigationBarTitle(Text("Updates"))
+            .navigationBarItems(leading:
+                                    Button(action: add, label: {
+                                        Image(systemName: "plus")
+                                    }),
+                                trailing: EditButton())
         }
     }
 }

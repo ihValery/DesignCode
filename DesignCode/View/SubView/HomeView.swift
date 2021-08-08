@@ -61,7 +61,7 @@ struct HomeView: View {
         .edgesIgnoringSafeArea(.all)
         
         .sheet(isPresented: $showUpdate) {
-            ContentView()
+            UpdateList()
         }
     }
 }
