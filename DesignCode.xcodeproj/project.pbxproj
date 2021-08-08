@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8088A32626C050F7003AE9A2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088A32526C050F7003AE9A2 /* RingView.swift */; };
 		809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3326BC244300D78937 /* DesignCodeApp.swift */; };
 		809B4E3626BC244300D78937 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3526BC244300D78937 /* Certificate.swift */; };
 		809B4E3826BC244800D78937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B4E3726BC244800D78937 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8088A32526C050F7003AE9A2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		809B4E3026BC244300D78937 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B4E3326BC244300D78937 /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
 		809B4E3526BC244300D78937 /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8088A32426C04FBD003AE9A2 /* Ring */ = {
+			isa = PBXGroup;
+			children = (
+				8088A32526C050F7003AE9A2 /* RingView.swift */,
+			);
+			path = Ring;
+			sourceTree = "<group>";
+		};
 		809B4E2726BC244300D78937 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */,
 				80AB565726BF6458004B7819 /* UpdateDetail.swift */,
 				80D6A5AF26BE020A00A2797D /* SubView */,
+				8088A32426C04FBD003AE9A2 /* Ring */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 				80D6A5AE26BDC8AB00A2797D /* MenuRow.swift in Sources */,
 				80AB565626BF62CA004B7819 /* UpdateRow.swift in Sources */,
 				80D6A5BE26BF2BEE00A2797D /* UpdateList.swift in Sources */,
+				8088A32626C050F7003AE9A2 /* RingView.swift in Sources */,
 				80D6A5AC26BDC51A00A2797D /* ProfileMenuView.swift in Sources */,
 				809B4E4E26BCF14A00D78937 /* Color.swift in Sources */,
 				80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */,

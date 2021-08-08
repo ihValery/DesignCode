@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UpdateList: View {
+//    @StateObject var store = UpdateStore()
     @ObservedObject var store = UpdateStore()
     
     func add() {
@@ -22,9 +23,11 @@ struct UpdateList: View {
                         UpdateRow(element: item)
                     }
                 }
+                
                 .onDelete { indexSet in
                     store.updates.remove(at: indexSet.first!)
                 }
+                
                 .onMove { indices, newOffset in
                     store.updates.move(fromOffsets: indices, toOffset: newOffset)
                 }
