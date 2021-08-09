@@ -28,6 +28,13 @@ struct HomeView: View {
             .padding(.horizontal)
             .padding(.leading, 16)
             .padding(.top, 30)
+            
+            HStack {
+                CurrentProgressView()
+                Spacer()
+            }
+            .padding(.leading, 30)
+            
                 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
