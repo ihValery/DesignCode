@@ -73,7 +73,7 @@ struct Certificate: View {
                                 if bottomStateFull {
                                     bottomState.height += screen.bottomFullOffset
                                 }
-                                
+
                                 if bottomState.height < screen.bottomFullOffset {
                                     bottomState.height = screen.bottomFullOffset
                                 }
@@ -82,7 +82,7 @@ struct Certificate: View {
                                 if bottomState.height > 70 {
                                     showCard = false
                                 }
-                                
+
                                 if (bottomState.height < -110 && !bottomStateFull) ||
                                     (bottomState.height < -200 && bottomStateFull) {
                                     bottomState.height = screen.bottomFullOffset
