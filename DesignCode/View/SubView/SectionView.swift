@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SectionView: View {
-//    var screen = ScreenBounds()
     var section: Section
     var size: CGFloat
     
@@ -42,7 +41,6 @@ struct SectionView: View {
         .padding(.top)
         .padding(.horizontal)
         .background(section.color)
-//        .frame(width: screen.widthSectionCard, height: screen.widthSectionCard)
         .frame(width: size, height: size)
         .cornerRadius(30)
         .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
