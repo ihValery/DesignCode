@@ -12,6 +12,7 @@
 		80610E2526C0CAD2009B0005 /* WorkSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */; };
 		80610E2726C0CDB2009B0005 /* FontWorkSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2626C0CDB2009B0005 /* FontWorkSans.swift */; };
 		80610E2926C0D683009B0005 /* WatchingRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2826C0D683009B0005 /* WatchingRingView.swift */; };
+		80610E2C26C23158009B0005 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2B26C23158009B0005 /* CourseList.swift */; };
 		8088A32626C050F7003AE9A2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088A32526C050F7003AE9A2 /* RingView.swift */; };
 		809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3326BC244300D78937 /* DesignCodeApp.swift */; };
 		809B4E3626BC244300D78937 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3526BC244300D78937 /* Certificate.swift */; };
@@ -45,6 +46,7 @@
 		80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		80610E2626C0CDB2009B0005 /* FontWorkSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWorkSans.swift; sourceTree = "<group>"; };
 		80610E2826C0D683009B0005 /* WatchingRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchingRingView.swift; sourceTree = "<group>"; };
+		80610E2B26C23158009B0005 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		8088A32526C050F7003AE9A2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		809B4E3026BC244300D78937 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B4E3326BC244300D78937 /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				80610E2626C0CDB2009B0005 /* FontWorkSans.swift */,
 			);
 			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		80610E2A26C2311A009B0005 /* CourseList */ = {
+			isa = PBXGroup;
+			children = (
+				80610E2B26C23158009B0005 /* CourseList.swift */,
+			);
+			path = CourseList;
 			sourceTree = "<group>";
 		};
 		8088A32426C04FBD003AE9A2 /* Ring */ = {
@@ -162,6 +172,7 @@
 				80AB565B26BF7E97004B7819 /* TabBar.swift */,
 				80D6A5AF26BE020A00A2797D /* SubView */,
 				8088A32426C04FBD003AE9A2 /* Ring */,
+				80610E2A26C2311A009B0005 /* CourseList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 				80AB565826BF6458004B7819 /* UpdateDetail.swift in Sources */,
 				80610E2026C0C1AD009B0005 /* CurrentProgressView.swift in Sources */,
 				80610E2326C0C662009B0005 /* BackgroundDoubleShadow.swift in Sources */,
+				80610E2C26C23158009B0005 /* CourseList.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,

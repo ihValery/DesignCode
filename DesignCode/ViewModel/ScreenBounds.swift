@@ -37,6 +37,7 @@ class ScreenBounds {
         screen.height < 750 ? -screen.height / 2 + 56 : -screen.height / 2 + 64
     }
     
+    /// 200 или 275
     var widthSectionCard: CGFloat {
         screen.height < 750 ? 200 : 275
     }
