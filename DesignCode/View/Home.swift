@@ -12,34 +12,55 @@ struct Home: View {
     
     @State private var showProfile = false
     @State private var profileState = CGSize.zero
+    @State private var showConWatching = false
     
     var body: some View {
         ZStack {
             ZStack {
                 Color.background2
                     .edgesIgnoringSafeArea(.all)
-                
-                HomeView(showProfile: $showProfile, profileState: $profileState)
+
+                HomeView(showProfile: $showProfile, profileState: $profileState, showContent: $showConWatching)
             }
             .onTapGesture {
                 showProfile = false
             }
-            
-            ProfileMenuView()
-                .offset(y: showProfile ? 0 : screen.height)
-                .offset(x: profileState.width, y: profileState.height)
-                .animation(.spring(response: 0.5, dampingFraction: 0.6))
-                .gesture(DragGesture()
-                            .onChanged { value in
-                                if profileState.height > 70 {
-                                    showProfile = false
-                                }
-                                profileState = value.translation
-                            }
-                            .onEnded { value in
-                                profileState = .zero
-                            }
-                )
+
+            ProfileMenuView(profile: $showProfile, state: $profileState)
+
+//Не красивая реализация .transition при использовании if
+/*
+            if showContent {
+                ZStack {
+                    Color.white
+                        .ignoresSafeArea()
+
+                    Certificate()
+                    
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Button(action: {
+                                showContent = false
+                            }, label: {
+                                Image(systemName: "xmark")
+                                    .frame(width: 36, height: 36)
+                                    .foregroundColor(.white)
+                                    .background(Color.black)
+                                    .clipShape(Circle())
+                            })
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                }
+                .transition(.asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing)))
+                .animation(.easeInOut)
+            }
+ */
+        }
+        .fullScreenCover(isPresented: $showConWatching) {
+            Certificate()
         }
     }
 }

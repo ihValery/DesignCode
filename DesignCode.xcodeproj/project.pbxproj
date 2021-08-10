@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80610E2026C0C1AD009B0005 /* CurrentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E1F26C0C1AD009B0005 /* CurrentProgressView.swift */; };
-		80610E2326C0C662009B0005 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2226C0C662009B0005 /* ShadowModifier.swift */; };
+		80610E2326C0C662009B0005 /* BackgroundDoubleShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2226C0C662009B0005 /* BackgroundDoubleShadow.swift */; };
 		80610E2526C0CAD2009B0005 /* WorkSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */; };
 		80610E2726C0CDB2009B0005 /* FontWorkSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2626C0CDB2009B0005 /* FontWorkSans.swift */; };
 		80610E2926C0D683009B0005 /* WatchingRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2826C0D683009B0005 /* WatchingRingView.swift */; };
@@ -22,7 +22,6 @@
 		809B4E4926BC6C1E00D78937 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4826BC6C1E00D78937 /* TitleView.swift */; };
 		809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4A26BC70AC00D78937 /* BottomCardView.swift */; };
 		809B4E4E26BCF14A00D78937 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4D26BCF14A00D78937 /* Color.swift */; };
-		809B4E5026BCFBC200D78937 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4F26BCFBC200D78937 /* View.swift */; };
 		809B4E5326BD171E00D78937 /* ScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E5226BD171E00D78937 /* ScreenBounds.swift */; };
 		80AB565626BF62CA004B7819 /* UpdateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB565526BF62CA004B7819 /* UpdateRow.swift */; };
 		80AB565826BF6458004B7819 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB565726BF6458004B7819 /* UpdateDetail.swift */; };
@@ -42,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		80610E1F26C0C1AD009B0005 /* CurrentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProgressView.swift; sourceTree = "<group>"; };
-		80610E2226C0C662009B0005 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		80610E2226C0C662009B0005 /* BackgroundDoubleShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundDoubleShadow.swift; sourceTree = "<group>"; };
 		80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		80610E2626C0CDB2009B0005 /* FontWorkSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWorkSans.swift; sourceTree = "<group>"; };
 		80610E2826C0D683009B0005 /* WatchingRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchingRingView.swift; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		809B4E4826BC6C1E00D78937 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		809B4E4A26BC70AC00D78937 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
 		809B4E4D26BCF14A00D78937 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		809B4E4F26BCFBC200D78937 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		809B4E5226BD171E00D78937 /* ScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBounds.swift; sourceTree = "<group>"; };
 		80AB565526BF62CA004B7819 /* UpdateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRow.swift; sourceTree = "<group>"; };
 		80AB565726BF6458004B7819 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
@@ -90,7 +88,7 @@
 		80610E2126C0C63D009B0005 /* CustomModifier */ = {
 			isa = PBXGroup;
 			children = (
-				80610E2226C0C662009B0005 /* ShadowModifier.swift */,
+				80610E2226C0C662009B0005 /* BackgroundDoubleShadow.swift */,
 				80610E2626C0CDB2009B0005 /* FontWorkSans.swift */,
 			);
 			path = CustomModifier;
@@ -158,10 +156,10 @@
 			children = (
 				80D6A5B026BE02A200A2797D /* Home.swift */,
 				809B4E3526BC244300D78937 /* Certificate.swift */,
-				80AB565B26BF7E97004B7819 /* TabBar.swift */,
 				80D6A5AB26BDC51A00A2797D /* ProfileMenuView.swift */,
 				80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */,
 				80AB565726BF6458004B7819 /* UpdateDetail.swift */,
+				80AB565B26BF7E97004B7819 /* TabBar.swift */,
 				80D6A5AF26BE020A00A2797D /* SubView */,
 				8088A32426C04FBD003AE9A2 /* Ring */,
 			);
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				809B4E4D26BCF14A00D78937 /* Color.swift */,
-				809B4E4F26BCFBC200D78937 /* View.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -285,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				80610E2726C0CDB2009B0005 /* FontWorkSans.swift in Sources */,
-				809B4E5026BCFBC200D78937 /* View.swift in Sources */,
 				809B4E5326BD171E00D78937 /* ScreenBounds.swift in Sources */,
 				80D6A5B726BF11ED00A2797D /* SectionView.swift in Sources */,
 				80D6A5C026BF2FB500A2797D /* Update.swift in Sources */,
@@ -304,7 +300,7 @@
 				80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */,
 				80AB565826BF6458004B7819 /* UpdateDetail.swift in Sources */,
 				80610E2026C0C1AD009B0005 /* CurrentProgressView.swift in Sources */,
-				80610E2326C0C662009B0005 /* ShadowModifier.swift in Sources */,
+				80610E2326C0C662009B0005 /* BackgroundDoubleShadow.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,

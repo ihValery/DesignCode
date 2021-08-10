@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct ProfileMenuView: View {
+    private var screen = ScreenBounds()
+    
+    @Binding var showProfile: Bool
+    @Binding var profileState: CGSize
+    
+    init(profile: Binding<Bool>, state: Binding<CGSize>) {
+        _showProfile = profile
+        _profileState = state
+    }
+    
     var body: some View {
         VStack {
             Spacer()
     
-            VStack(spacing: 5) {
-                Text("Meng - 28% complete")
+            VStack(spacing: 0) {
+                Text("ihValery")
+                    .font(.title2)
+                Text("28% complete")
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
                 
+                //Статический слайдер реализованный без родительских стеков
                 Color.white
                     .frame(width: 38, height: 6)
                     .cornerRadius(3)
@@ -34,7 +49,10 @@ struct ProfileMenuView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.white, .background4]), startPoint: .top, endPoint: .bottom))
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.white, .background4]),
+                               startPoint: .top, endPoint: .bottom)
+            )
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
             .padding(.horizontal, 30)
@@ -48,12 +66,30 @@ struct ProfileMenuView: View {
             )
         }
         .padding(.bottom, 30)
+        
+        .offset(y: showProfile ? 0 : screen.height)
+        .offset(x: profileState.width, y: profileState.height)
+        .animation(.spring(response: 0.5, dampingFraction: 0.6))
+        
+        .gesture(
+            DragGesture()
+                .onChanged { value in
+                    if profileState.height > 70 {
+                        showProfile = false
+                    }
+                    profileState = value.translation
+                }
+                
+                .onEnded { value in
+                    profileState = .zero
+                }
+        )
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileMenuView()
+        ProfileMenuView(profile: .constant(true), state: .constant(.zero))
             .previewDevice("iPhone 12 Pro")
     }
 }

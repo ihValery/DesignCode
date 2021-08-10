@@ -16,20 +16,19 @@ struct Certificate: View {
     @State private var bottomState = CGSize.zero
     @State private var bottomStateFull = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack {
             TitleView()
                 .blur(radius: show ? 20 : 0)
                 .opacity(showCard ? 0.4 : 1)
                 .scaleEffect(showCard ? 1.5 : 1)
-                .animation(.default
-                            .delay(0.1)
-                            .speed(2))
+                .animation(.default.delay(0.1).speed(2))
             
             BackCardView(color: .card4)
                 .offset(x: viewState.width, y: viewState.height)
                 .offset(y: showCard ? -210 : 0)
-                .opacity(bottomState.height < -250 ? 0 : 1)
                 .scaleEffect(0.8, anchor: showCard ? .top : .topTrailing)
                 .rotationEffect(.degrees(show ? 60 : 10), anchor: .topTrailing)
                 .rotationEffect(.degrees(showCard ? -10 : 0), anchor: .topTrailing)
@@ -38,7 +37,6 @@ struct Certificate: View {
             BackCardView(color: .card3)
                 .offset(x: viewState.width, y: viewState.height)
                 .offset(y: showCard ? -160 : 0)
-                .opacity(bottomState.height < -250 ? 0 : 1)
                 .scaleEffect(0.9, anchor: showCard ? .top : .topTrailing)
                 .rotationEffect(.degrees(show ? 30 : 5), anchor: .topTrailing)
                 .rotationEffect(.degrees(showCard ? -5 : 0), anchor: .topTrailing)
@@ -93,6 +91,26 @@ struct Certificate: View {
                                 }
                             }
                 )
+            
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        withAnimation(.none) {
+                            showCard = false
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }, label: {
+                        Image(systemName: "xmark.circle")
+                            .font(.title)
+                            .foregroundColor(.black)
+                    })
+                    Spacer()
+                }
+            }
+            .padding()
         }
     }
 }

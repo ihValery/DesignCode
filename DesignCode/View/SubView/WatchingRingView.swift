@@ -14,11 +14,12 @@ struct WatchingRingView: View {
             
             RingView(colorOne: Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), colorTwo: Color(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)), size: 44, percent: 65, ringAnimation: .constant(true))
                 .padding()
-                .shadowMofifier()
+                .backgroundDoubleShadow()
             
-            RingView(colorOne: Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)), colorTwo: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), size: 32, percent: 34, ringAnimation: .constant(true))
+            RingView(colorOne: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)), colorTwo: Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)), size: 44, percent: 34, ringAnimation: .constant(true))
                 .padding()
-                .shadowMofifier()
+                .backgroundDoubleShadow()
+                .padding(.trailing, 30)
         }
         .padding(.leading, 30)
         .padding(.bottom, 30)

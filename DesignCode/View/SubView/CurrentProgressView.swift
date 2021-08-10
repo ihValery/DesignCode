@@ -29,7 +29,7 @@ struct CurrentProgressView: View {
             }
         }
         .padding()
-        .shadowMofifier()
+        .backgroundDoubleShadow()
     }
 }
 

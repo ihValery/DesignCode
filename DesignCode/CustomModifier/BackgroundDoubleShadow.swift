@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShadowModifier: ViewModifier {
+struct BackgroundDoubleShadow: ViewModifier {
     func body(content: Content) -> some View {
         content
             .background(Color.white)
@@ -18,7 +18,8 @@ struct ShadowModifier: ViewModifier {
 }
 
 extension View {
-    func shadowMofifier() -> some View {
-        self.modifier(ShadowModifier())
+    ///Белый фон с закругленными углами и двойная тень
+    func backgroundDoubleShadow() -> some View {
+        self.modifier(BackgroundDoubleShadow())
     }
 }

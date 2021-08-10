@@ -23,7 +23,6 @@ struct UpdateDetail: View {
             }
             .navigationTitle(element.title)
         }
-//        .listStyle(PlainListStyle())
     }
 }
 
