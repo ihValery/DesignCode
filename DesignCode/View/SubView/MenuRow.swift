@@ -3,7 +3,7 @@
 //  DesignCode
 //
 //  Created by Валерий Игнатьев on 06.08.2021.
-//
+//  Ok
 
 import SwiftUI
 
@@ -12,16 +12,21 @@ struct MenuRow: View {
     var icon: String
     
     var body: some View {
-        HStack(spacing: 16) {
-            Image(systemName: icon)
-                .font(.system(size: 20, weight: .light))
-                .imageScale(.large)
-                .frame(width: 32, height: 32)
-                .foregroundColor(.gray)
-            Text(title)
-                .font(.system(size: 20, design: .default))
-                .frame(width: 120, alignment: .leading)
-        }
+        Button(action: {
+            
+        }, label: {
+            HStack(spacing: 16) {
+                Image(systemName: icon)
+                    .font(.title2)
+                    .imageScale(.large)
+                    .frame(width: 32, height: 32)
+                    .foregroundColor(.gray)
+                Text(title)
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    .frame(width: 120, alignment: .leading)
+            }
+        })
     }
 }
 

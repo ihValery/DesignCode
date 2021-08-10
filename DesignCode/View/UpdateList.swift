@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct UpdateList: View {
-//    @StateObject var store = UpdateStore()
-    @ObservedObject var store = UpdateStore()
+    @StateObject var store = UpdateStore()
+//    @ObservedObject var store = UpdateStore()
     
     func add() {
         store.updates.append(Update(image: "Card6", title: "New item", text: "This is a hardcoded item. For dynamism, it is tedious to create a separate view in which we will collect the data entered by the user.", date: "AUG 8"))
