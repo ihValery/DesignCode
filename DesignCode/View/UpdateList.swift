@@ -18,7 +18,7 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(store.updates) { item in
+                ForEach(updateData) { item in
                     NavigationLink(destination: UpdateDetail(element: item)) {
                         UpdateRow(element: item)
                     }
