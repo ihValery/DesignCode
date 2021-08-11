@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CourseOneView: View {
     var screen = ScreenBounds()
-    @State var animationCourse = false
+    @Binding var animationCourse: Bool
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -78,7 +78,7 @@ struct CourseOneView: View {
 
 struct CourseOneView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseOneView()
+        CourseOneView(animationCourse: .constant(false))
             .previewDevice("iPhone 12 Pro")
     }
 }

@@ -12,7 +12,7 @@ struct DesignCodeApp: App {
     var body: some Scene {
         WindowGroup {
 //            Home()
-            CourseOneView()
+            CourseCaruselList()
         }
     }
 }
