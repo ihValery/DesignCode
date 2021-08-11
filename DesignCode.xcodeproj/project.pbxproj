@@ -12,6 +12,7 @@
 		80610E2526C0CAD2009B0005 /* WorkSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */; };
 		80610E2726C0CDB2009B0005 /* FontWorkSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2626C0CDB2009B0005 /* FontWorkSans.swift */; };
 		80610E2926C0D683009B0005 /* WatchingRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2826C0D683009B0005 /* WatchingRingView.swift */; };
+		80610E2C26C23158009B0005 /* CourseCaruselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2B26C23158009B0005 /* CourseCaruselList.swift */; };
 		8088A32626C050F7003AE9A2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088A32526C050F7003AE9A2 /* RingView.swift */; };
 		809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3326BC244300D78937 /* DesignCodeApp.swift */; };
 		809B4E3626BC244300D78937 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3526BC244300D78937 /* Certificate.swift */; };
@@ -37,6 +38,9 @@
 		80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5BB26BF2A9100A2797D /* ButtonBell.swift */; };
 		80D6A5BE26BF2BEE00A2797D /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */; };
 		80D6A5C026BF2FB500A2797D /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6A5BF26BF2FB500A2797D /* Update.swift */; };
+		80DC1D5226C2A7E500D97A32 /* CourseOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC1D5126C2A7E500D97A32 /* CourseOneView.swift */; };
+		80DC1D5426C2AC6F00D97A32 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC1D5326C2AC6F00D97A32 /* CustomCorners.swift */; };
+		80DC1D5626C340E700D97A32 /* LogoTurnsDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC1D5526C340E700D97A32 /* LogoTurnsDismiss.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,7 @@
 		80610E2426C0CAD1009B0005 /* WorkSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		80610E2626C0CDB2009B0005 /* FontWorkSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWorkSans.swift; sourceTree = "<group>"; };
 		80610E2826C0D683009B0005 /* WatchingRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchingRingView.swift; sourceTree = "<group>"; };
+		80610E2B26C23158009B0005 /* CourseCaruselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCaruselList.swift; sourceTree = "<group>"; };
 		8088A32526C050F7003AE9A2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		809B4E3026BC244300D78937 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B4E3326BC244300D78937 /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 		80D6A5BB26BF2A9100A2797D /* ButtonBell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBell.swift; sourceTree = "<group>"; };
 		80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		80D6A5BF26BF2FB500A2797D /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		80DC1D5126C2A7E500D97A32 /* CourseOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseOneView.swift; sourceTree = "<group>"; };
+		80DC1D5326C2AC6F00D97A32 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		80DC1D5526C340E700D97A32 /* LogoTurnsDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTurnsDismiss.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,15 @@
 				80610E2626C0CDB2009B0005 /* FontWorkSans.swift */,
 			);
 			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		80610E2A26C2311A009B0005 /* CourseCarusel */ = {
+			isa = PBXGroup;
+			children = (
+				80DC1D5126C2A7E500D97A32 /* CourseOneView.swift */,
+				80DC1D5526C340E700D97A32 /* LogoTurnsDismiss.swift */,
+			);
+			path = CourseCarusel;
 			sourceTree = "<group>";
 		};
 		8088A32426C04FBD003AE9A2 /* Ring */ = {
@@ -157,11 +174,12 @@
 				80D6A5B026BE02A200A2797D /* Home.swift */,
 				809B4E3526BC244300D78937 /* Certificate.swift */,
 				80D6A5AB26BDC51A00A2797D /* ProfileMenuView.swift */,
+				80610E2B26C23158009B0005 /* CourseCaruselList.swift */,
 				80D6A5BD26BF2BEE00A2797D /* UpdateList.swift */,
-				80AB565726BF6458004B7819 /* UpdateDetail.swift */,
 				80AB565B26BF7E97004B7819 /* TabBar.swift */,
 				80D6A5AF26BE020A00A2797D /* SubView */,
 				8088A32426C04FBD003AE9A2 /* Ring */,
+				80610E2A26C2311A009B0005 /* CourseCarusel */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				809B4E4D26BCF14A00D78937 /* Color.swift */,
+				80DC1D5326C2AC6F00D97A32 /* CustomCorners.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,6 +204,7 @@
 		80D6A5AF26BE020A00A2797D /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				80AB565726BF6458004B7819 /* UpdateDetail.swift */,
 				809B4E4426BC2DC700D78937 /* CardView.swift */,
 				80610E1F26C0C1AD009B0005 /* CurrentProgressView.swift */,
 				809B4E4626BC3AC600D78937 /* BackCardView.swift */,
@@ -289,6 +309,7 @@
 				809B4E3626BC244300D78937 /* Certificate.swift in Sources */,
 				80AB565A26BF6A97004B7819 /* UpdateStore.swift in Sources */,
 				809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */,
+				80DC1D5626C340E700D97A32 /* LogoTurnsDismiss.swift in Sources */,
 				809B4E4526BC2DC700D78937 /* CardView.swift in Sources */,
 				80D6A5AE26BDC8AB00A2797D /* MenuRow.swift in Sources */,
 				80AB565626BF62CA004B7819 /* UpdateRow.swift in Sources */,
@@ -300,9 +321,12 @@
 				80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */,
 				80AB565826BF6458004B7819 /* UpdateDetail.swift in Sources */,
 				80610E2026C0C1AD009B0005 /* CurrentProgressView.swift in Sources */,
+				80DC1D5426C2AC6F00D97A32 /* CustomCorners.swift in Sources */,
 				80610E2326C0C662009B0005 /* BackgroundDoubleShadow.swift in Sources */,
+				80610E2C26C23158009B0005 /* CourseCaruselList.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
+				80DC1D5226C2A7E500D97A32 /* CourseOneView.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,
 				80D6A5BA26BF185100A2797D /* Section.swift in Sources */,
 				80D6A5B526BF0D3200A2797D /* AvatarButton.swift in Sources */,
