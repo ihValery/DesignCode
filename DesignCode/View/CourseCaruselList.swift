@@ -10,11 +10,23 @@ import SwiftUI
 struct CourseCaruselList: View {
     var screen = ScreenBounds()
     @State var courses = courseData
-    @State var statusBar = false
+    @State var showFullScreenCard = false
+    @State var activeIndex = -1
     
     var body: some View {
         ZStack {
-            Color.black.opacity(statusBar ? 0.5 : 0)
+            //StatusBar бекграун для него
+            VStack {
+                BlurView()
+                    .opacity(showFullScreenCard ? 0 : 1)
+                    .frame(height: screen.height < 750 ? 24 : 44)
+                    .animation(.linear.speed(2))
+                Spacer()
+            }
+            .zIndex(1)
+            .ignoresSafeArea()
+            
+            Color.black.opacity(showFullScreenCard ? 0.5 : 0)
                 .animation(.linear)
                 .ignoresSafeArea()
             
@@ -24,12 +36,20 @@ struct CourseCaruselList: View {
                         .font(.title.bold())
                         .padding(.horizontal, 30)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .blur(radius: statusBar ? 20 : 0)
+                        .blur(radius: showFullScreenCard ? 20 : 0)
                     
                     ForEach(courses.indices, id:\.self) { index in
                         GeometryReader { gr in
-                            CourseOneView(course: courses[index], animationCourse: $courses[index].isActive, statusBar: $statusBar)
-                                .offset(y: courses[index].isActive ? -gr.frame(in: .global).minY : 0)
+                            CourseOneView(
+                                course: courses[index],
+                                animationCourse: $courses[index].isActive,
+                                fullScreenCard: $showFullScreenCard,
+                                index: index,
+                                activIndex: $activeIndex
+                            )
+                            .offset(y: courses[index].isActive ? -gr.frame(in: .global).minY : 0)
+                            .opacity(activeIndex != index && showFullScreenCard ? 0 : 1)
+                            .scaleEffect(activeIndex != index && showFullScreenCard ? 0.5 : 1)
                         }
                         .frame(height: screen.widthSectionCard + 5)
                         .frame(maxWidth: courses[index].isActive ? .infinity : screen.width - 60)
@@ -42,7 +62,7 @@ struct CourseCaruselList: View {
                 .frame(width: screen.width)
                 .animation(.spring(dampingFraction: 0.7))
             }
-            .statusBar(hidden: statusBar)
+            .statusBar(hidden: showFullScreenCard)
             .animation(.linear)
         }
     }
