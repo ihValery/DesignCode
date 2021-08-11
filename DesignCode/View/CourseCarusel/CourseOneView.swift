@@ -11,7 +11,10 @@ struct CourseOneView: View {
     var screen = ScreenBounds()
     var course: Course
     @Binding var animationCourse: Bool
-    @Binding var statusBar: Bool
+    @Binding var fullScreenCard: Bool
+    
+    var index: Int
+    @Binding var activIndex: Int
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -32,6 +35,7 @@ struct CourseOneView: View {
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: animationCourse ? 0 : 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
+            .opacity(animationCourse ? 1 : 0)
             
             //Картинка карточки
             VStack {
@@ -48,10 +52,11 @@ struct CourseOneView: View {
                     
                     //Логотип превращаеться в dismiss
                     LogoTurnsDismiss(animationCourse: $animationCourse) {
-                        statusBar = false
+                        fullScreenCard = false
+                        activIndex = -1
                     }
                 }
-                .padding(.top, statusBar ? (screen.height < 750 ? 20 : 40) : 0)
+                .padding(.top, fullScreenCard ? (screen.height < 750 ? 20 : 0) : 0)
                 Spacer()
                 course.image
                     .resizable()
@@ -73,7 +78,8 @@ struct CourseOneView: View {
             
             .onTapGesture {
                 animationCourse = true
-                statusBar = true
+                fullScreenCard = true
+                activIndex = index
             }
         }
         .frame(height: animationCourse ? screen.height : screen.widthSectionCard + 5)
@@ -85,7 +91,7 @@ struct CourseOneView: View {
 struct CourseOneView_Previews: PreviewProvider {
     static var previews: some View {
         let course = courseData[2]
-        CourseOneView(course: course, animationCourse: .constant(false), statusBar: .constant(false))
+        CourseOneView(course: course, animationCourse: .constant(false), fullScreenCard: .constant(false), index: 1, activIndex: .constant(1))
             .previewDevice("iPhone 12 Pro")
     }
 }

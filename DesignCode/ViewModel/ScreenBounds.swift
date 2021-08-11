@@ -12,7 +12,7 @@ class ScreenBounds {
 
     var height = UIScreen.main.bounds.height
     var width = UIScreen.main.bounds.width
-    
+
     var widthCard: CGFloat {
         screen.height < 750 ? 290 : 340
     }
