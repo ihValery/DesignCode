@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CourseOneView: View {
     var screen = ScreenBounds()
+    var course: Course
     @Binding var animationCourse: Bool
     
     var body: some View {
@@ -35,11 +36,11 @@ struct CourseOneView: View {
             VStack {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("SwiftUI Advanced")
+                        Text(course.title)
                             .font(screen.height < 750 ? .title3 : .title)
                             .bold()
                             .foregroundColor(.white)
-                        Text("20 Sections")
+                        Text(course.subtitle)
                             .foregroundColor(.white.opacity(0.7))
                     }
                     Spacer()
@@ -49,7 +50,7 @@ struct CourseOneView: View {
 
                 }
                 Spacer()
-                Image("Card2")
+                course.image
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -60,25 +61,27 @@ struct CourseOneView: View {
             .padding(.top, animationCourse ? (UIApplication.shared.windows.first!.safeAreaInsets.top + 10) : 20)
             .frame(maxWidth: animationCourse ? .infinity : screen.width - 60,
                    maxHeight: animationCourse ? screen.height * 1.61 / 3 : screen.widthSectionCard + 25)
-            .background(Color.card1)
+            .background(course.color)
             .clipShape(CustomCorners(corner: animationCourse ? [.bottomLeft, .bottomRight] : .allCorners,
                                      radius: 30))
             //Что бы анимировать два верхних угла
             .clipShape(RoundedRectangle(cornerRadius: animationCourse ? 0 : 30, style: .continuous))
-            .shadow(color: .card1.opacity(0.3), radius: 20, x: 0, y: 20)
+            .shadow(color: course.color.opacity(0.3), radius: 20, x: 0, y: 20)
             
             .onTapGesture {
                 animationCourse = true
             }
         }
-        .animation(.spring(dampingFraction: 0.7).speed(0.25))
+        .frame(height: animationCourse ? screen.height : screen.widthSectionCard + 5)
+        .animation(.spring(dampingFraction: 0.7).speed(0.1))
         .ignoresSafeArea()
     }
 }
 
 struct CourseOneView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseOneView(animationCourse: .constant(false))
+        let course = courseData[2]
+        CourseOneView(course: course, animationCourse: .constant(false))
             .previewDevice("iPhone 12 Pro")
     }
 }

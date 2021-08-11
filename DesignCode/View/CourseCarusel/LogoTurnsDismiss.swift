@@ -17,7 +17,6 @@ struct LogoTurnsDismiss: View {
                 animationCourse = false
             }, label: {
                 Image(systemName: "xmark.circle.fill")
-//                    .font(.largeTitle)
                     .resizable()
                     .rotationEffect(.degrees(animationCourse ? 0 : -360))
                     .opacity(animationCourse ? 1 : 0)
