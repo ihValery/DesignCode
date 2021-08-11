@@ -14,6 +14,7 @@
 		80610E2926C0D683009B0005 /* WatchingRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2826C0D683009B0005 /* WatchingRingView.swift */; };
 		80610E2C26C23158009B0005 /* CourseCaruselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80610E2B26C23158009B0005 /* CourseCaruselList.swift */; };
 		8088A32626C050F7003AE9A2 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8088A32526C050F7003AE9A2 /* RingView.swift */; };
+		80981E5626C352CC00F18262 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80981E5526C352CC00F18262 /* Course.swift */; };
 		809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3326BC244300D78937 /* DesignCodeApp.swift */; };
 		809B4E3626BC244300D78937 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E3526BC244300D78937 /* Certificate.swift */; };
 		809B4E3826BC244800D78937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809B4E3726BC244800D78937 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		80610E2826C0D683009B0005 /* WatchingRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchingRingView.swift; sourceTree = "<group>"; };
 		80610E2B26C23158009B0005 /* CourseCaruselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCaruselList.swift; sourceTree = "<group>"; };
 		8088A32526C050F7003AE9A2 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		80981E5526C352CC00F18262 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		809B4E3026BC244300D78937 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B4E3326BC244300D78937 /* DesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeApp.swift; sourceTree = "<group>"; };
 		809B4E3526BC244300D78937 /* Certificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				80D6A5B926BF185100A2797D /* Section.swift */,
 				80D6A5BF26BF2FB500A2797D /* Update.swift */,
 				80AB565926BF6A97004B7819 /* UpdateStore.swift */,
+				80981E5526C352CC00F18262 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				80610E2326C0C662009B0005 /* BackgroundDoubleShadow.swift in Sources */,
 				80610E2C26C23158009B0005 /* CourseCaruselList.swift in Sources */,
 				809B4E3426BC244300D78937 /* DesignCodeApp.swift in Sources */,
+				80981E5626C352CC00F18262 /* Course.swift in Sources */,
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				80DC1D5226C2A7E500D97A32 /* CourseOneView.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,
