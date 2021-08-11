@@ -9,12 +9,14 @@ import SwiftUI
 
 struct LogoTurnsDismiss: View {
     @Binding var animationCourse: Bool
+    var action: () -> Void
     
     var body: some View {
         //Логотип превращаеться в dismiss
         ZStack {
             Button(action: {
                 animationCourse = false
+                action()
             }, label: {
                 Image(systemName: "xmark.circle.fill")
                     .resizable()
@@ -33,7 +35,7 @@ struct LogoTurnsDismiss: View {
 
 struct LogoTurnsDismiss_Previews: PreviewProvider {
     static var previews: some View {
-        LogoTurnsDismiss(animationCourse: .constant(true))
+        LogoTurnsDismiss(animationCourse: .constant(true), action: {})
             .previewDevice("iPhone 12 Pro")
     }
 }

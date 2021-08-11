@@ -11,6 +11,7 @@ struct CourseOneView: View {
     var screen = ScreenBounds()
     var course: Course
     @Binding var animationCourse: Bool
+    @Binding var statusBar: Bool
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -46,9 +47,11 @@ struct CourseOneView: View {
                     Spacer()
                     
                     //Логотип превращаеться в dismiss
-                    LogoTurnsDismiss(animationCourse: $animationCourse)
-
+                    LogoTurnsDismiss(animationCourse: $animationCourse) {
+                        statusBar = false
+                    }
                 }
+                .padding(.top, statusBar ? (screen.height < 750 ? 20 : 40) : 0)
                 Spacer()
                 course.image
                     .resizable()
@@ -70,10 +73,11 @@ struct CourseOneView: View {
             
             .onTapGesture {
                 animationCourse = true
+                statusBar = true
             }
         }
         .frame(height: animationCourse ? screen.height : screen.widthSectionCard + 5)
-        .animation(.spring(dampingFraction: 0.7).speed(0.1))
+        .animation(.spring(dampingFraction: 0.7))
         .ignoresSafeArea()
     }
 }
@@ -81,7 +85,7 @@ struct CourseOneView: View {
 struct CourseOneView_Previews: PreviewProvider {
     static var previews: some View {
         let course = courseData[2]
-        CourseOneView(course: course, animationCourse: .constant(false))
+        CourseOneView(course: course, animationCourse: .constant(false), statusBar: .constant(false))
             .previewDevice("iPhone 12 Pro")
     }
 }
