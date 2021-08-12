@@ -13,6 +13,7 @@ struct DesignCodeApp: App {
         WindowGroup {
 //            Home()
             CourseCaruselList()
+//            CourseDetail(course: courseData[2])
         }
     }
 }

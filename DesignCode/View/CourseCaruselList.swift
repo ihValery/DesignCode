@@ -27,7 +27,8 @@ struct CourseCaruselList: View {
             .zIndex(1)
             .ignoresSafeArea()
             
-            Color.black.opacity(Double(gestureOffset.height / 500))
+//            Color.black.opacity(Double(gestureOffset.height / 500))
+            Color.black.opacity(showFullScreenCard ? 0.5 : 0)
                 .animation(.linear)
                 .ignoresSafeArea()
             
