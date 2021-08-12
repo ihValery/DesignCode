@@ -16,6 +16,8 @@ struct CourseOneView: View {
     var index: Int
     @Binding var activIndex: Int
     
+    @Binding var gestureOffset: CGSize
+    
     var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 30) {
@@ -33,6 +35,9 @@ struct CourseOneView: View {
                    maxHeight: animationCourse ? .infinity : screen.widthSectionCard + 25, alignment: .top)
             .offset(y: animationCourse ? screen.height * 1.61 / 3 : 0)
             .background(Color.white)
+            //Убрать фризы верхних белых углов
+            .clipShape(CustomCorners(corner: animationCourse ? [.topLeft, .topRight] : .allCorners,
+                                     radius: 30))
             .clipShape(RoundedRectangle(cornerRadius: animationCourse ? 0 : 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(animationCourse ? 1 : 0)
@@ -56,7 +61,8 @@ struct CourseOneView: View {
                         activIndex = -1
                     }
                 }
-                .padding(.top, fullScreenCard ? (screen.height < 750 ? 20 : 0) : 0)
+                //40 - Canvas
+                .padding(.top, fullScreenCard ? (screen.height < 750 ? 20 : 40) : 0)
                 Spacer()
                 course.image
                     .resizable()
@@ -76,14 +82,76 @@ struct CourseOneView: View {
             .clipShape(RoundedRectangle(cornerRadius: animationCourse ? 0 : 30, style: .continuous))
             .shadow(color: course.color.opacity(0.3), radius: 20, x: 0, y: 20)
             
+//            .gesture(
+//                //Жесты работают только в полноРежимном варианте(это сильно через тернарный оператор)
+//                animationCourse ?
+//                DragGesture()
+//                    .onChanged { value in
+//                        guard value.translation.height < 300 else { return }
+//                        guard value.translation.height > 0 else { return }
+//
+//                        gestureOffset = value.translation
+//                    }
+//                    .onEnded { value in
+//                        if gestureOffset.height > 150 {
+//                            animationCourse = false
+//                            fullScreenCard = false
+//                            activIndex = -1
+//                        }
+//                        gestureOffset = .zero
+//                    }
+//                : nil
+//            )
+            
             .onTapGesture {
                 animationCourse = true
                 fullScreenCard = true
                 activIndex = index
+                
+//                //Временное
+//                animationCourse.toggle()
+//                fullScreenCard.toggle()
+//                if animationCourse {
+//                    activIndex = index
+//                } else  {
+//                    activIndex = -1
+//                }
+            }
+            
+            if animationCourse {
+                CourseDetail(course: course, animationCourse: $animationCourse, fullScreenCard: $fullScreenCard, activIndex: $activIndex)
+                    .background(Color.white)
+                    .animation(nil)
             }
         }
         .frame(height: animationCourse ? screen.height : screen.widthSectionCard + 5)
+//        .scaleEffect(1 - gestureOffset.height / 1000)
+//        .rotation3DEffect(.degrees(Double(gestureOffset.height / 10)), axis: (x: 0, y: 10, z: 0))
+        //Вырви глаз )))
+//        .hueRotation(.degrees(Double(gestureOffset.height)))
         .animation(.spring(dampingFraction: 0.7))
+        
+//        .gesture(
+//            //Жесты работают только в полноРежимном варианте(это сильно через тернарный оператор)
+//            animationCourse ?
+//            DragGesture()
+//                .onChanged { value in
+//                    guard value.translation.height < 300 else { return }
+//                    guard value.translation.height > 0 else { return }
+//
+//                    gestureOffset = value.translation
+//                }
+//                .onEnded { value in
+//                    if gestureOffset.height > 150 {
+//                        animationCourse = false
+//                        fullScreenCard = false
+//                        activIndex = -1
+//                    }
+//                    gestureOffset = .zero
+//                }
+//            : nil
+//        )
+        
         .ignoresSafeArea()
     }
 }
@@ -91,7 +159,7 @@ struct CourseOneView: View {
 struct CourseOneView_Previews: PreviewProvider {
     static var previews: some View {
         let course = courseData[2]
-        CourseOneView(course: course, animationCourse: .constant(false), fullScreenCard: .constant(false), index: 1, activIndex: .constant(1))
+        CourseOneView(course: course, animationCourse: .constant(false), fullScreenCard: .constant(false), index: 1, activIndex: .constant(1), gestureOffset: .constant(.zero))
             .previewDevice("iPhone 12 Pro")
     }
 }

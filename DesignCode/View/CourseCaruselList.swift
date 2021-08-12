@@ -12,6 +12,7 @@ struct CourseCaruselList: View {
     @State var courses = courseData
     @State var showFullScreenCard = false
     @State var activeIndex = -1
+    @State var gestureOffset = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -26,6 +27,7 @@ struct CourseCaruselList: View {
             .zIndex(1)
             .ignoresSafeArea()
             
+//            Color.black.opacity(Double(gestureOffset.height / 500))
             Color.black.opacity(showFullScreenCard ? 0.5 : 0)
                 .animation(.linear)
                 .ignoresSafeArea()
@@ -45,7 +47,8 @@ struct CourseCaruselList: View {
                                 animationCourse: $courses[index].isActive,
                                 fullScreenCard: $showFullScreenCard,
                                 index: index,
-                                activIndex: $activeIndex
+                                activIndex: $activeIndex,
+                                gestureOffset: $gestureOffset
                             )
                             .offset(y: courses[index].isActive ? -gr.frame(in: .global).minY : 0)
                             .opacity(activeIndex != index && showFullScreenCard ? 0 : 1)

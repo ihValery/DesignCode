@@ -26,6 +26,8 @@
 		809B4E4B26BC70AC00D78937 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4A26BC70AC00D78937 /* BottomCardView.swift */; };
 		809B4E4E26BCF14A00D78937 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E4D26BCF14A00D78937 /* Color.swift */; };
 		809B4E5326BD171E00D78937 /* ScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B4E5226BD171E00D78937 /* ScreenBounds.swift */; };
+		80A2BBEA26C4758A000A7606 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBE926C4758A000A7606 /* CourseDetail.swift */; };
+		80A2BBEC26C49990000A7606 /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A2BBEB26C49990000A7606 /* ParallaxHeader.swift */; };
 		80AB565626BF62CA004B7819 /* UpdateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB565526BF62CA004B7819 /* UpdateRow.swift */; };
 		80AB565826BF6458004B7819 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB565726BF6458004B7819 /* UpdateDetail.swift */; };
 		80AB565A26BF6A97004B7819 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB565926BF6A97004B7819 /* UpdateStore.swift */; };
@@ -67,6 +69,8 @@
 		809B4E4A26BC70AC00D78937 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
 		809B4E4D26BCF14A00D78937 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		809B4E5226BD171E00D78937 /* ScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBounds.swift; sourceTree = "<group>"; };
+		80A2BBE926C4758A000A7606 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
+		80A2BBEB26C49990000A7606 /* ParallaxHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
 		80AB565526BF62CA004B7819 /* UpdateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRow.swift; sourceTree = "<group>"; };
 		80AB565726BF6458004B7819 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		80AB565926BF6A97004B7819 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				80DC1D5126C2A7E500D97A32 /* CourseOneView.swift */,
+				80A2BBE926C4758A000A7606 /* CourseDetail.swift */,
+				80A2BBEB26C49990000A7606 /* ParallaxHeader.swift */,
 				80DC1D5526C340E700D97A32 /* LogoTurnsDismiss.swift */,
 			);
 			path = CourseCarusel;
@@ -322,6 +328,7 @@
 				80D6A5BE26BF2BEE00A2797D /* UpdateList.swift in Sources */,
 				80610E2926C0D683009B0005 /* WatchingRingView.swift in Sources */,
 				8088A32626C050F7003AE9A2 /* RingView.swift in Sources */,
+				80A2BBEA26C4758A000A7606 /* CourseDetail.swift in Sources */,
 				80D6A5AC26BDC51A00A2797D /* ProfileMenuView.swift in Sources */,
 				809B4E4E26BCF14A00D78937 /* Color.swift in Sources */,
 				80D6A5BC26BF2A9100A2797D /* ButtonBell.swift in Sources */,
@@ -335,6 +342,7 @@
 				809B4E4726BC3AC600D78937 /* BackCardView.swift in Sources */,
 				80981E5826C37E2F00F18262 /* BlurView.swift in Sources */,
 				80DC1D5226C2A7E500D97A32 /* CourseOneView.swift in Sources */,
+				80A2BBEC26C49990000A7606 /* ParallaxHeader.swift in Sources */,
 				80D6A5B126BE02A200A2797D /* Home.swift in Sources */,
 				80D6A5BA26BF185100A2797D /* Section.swift in Sources */,
 				80D6A5B526BF0D3200A2797D /* AvatarButton.swift in Sources */,
